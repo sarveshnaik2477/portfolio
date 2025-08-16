@@ -137,10 +137,6 @@
 			</div>
 		</div>
 	</nav>
-<!--lottie start -->
-
-<!--lottie end -->
-
 
 	
 	<section id="home-section" class="hero">
@@ -208,24 +204,37 @@
 							</div>
 						</div>
 
-						 <!-- Right side: Lottie Animation -->
-          <div class="col-md-6 d-flex justify-content-center">
-            <lottie-player
-              src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
-              background="transparent"
-              speed="1"
-              style="width:300px;height:300px"
-              loop
-              autoplay>
-            </lottie-player>
-          </div>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-<!-- Lottie Player Script -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!--lottie start -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lottie Demo</title>
+  <!-- Lottie web component -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    .lottie-wrap{display:flex;align-items:center;justify-content:center;min-height:40vh;}
+  </style>
+</head>
+<body>
+  <div class="lottie-wrap">
+    <lottie-player
+      src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+      background="transparent"
+      speed="1"
+      style="width:300px;height:300px"
+      loop
+      autoplay>
+    </lottie-player>
+  </div>
+</body>
+<!--lottie end -->
+
 
 
 	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
