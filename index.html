@@ -3,9 +3,6 @@
 
 <head>
 	<title>Sarvesh S Naik Portfolio</title>
-	 <!-- Lottie -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -113,16 +110,6 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
-		.hero-lottie {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-lottie lottie-player {
-      width: 350px;
-      height: 350px;
-    }
 	</style>
 
 
@@ -153,65 +140,116 @@
 
 	
 	<section id="home-section" class="hero">
-  <div class="home-slider owl-carousel">
-    <div class="slider-item ">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-between"
-          data-scrollax-parent="true">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h2 class="mb-4 mt-3">I'm <span>Sarvesh S Naik</span></h2>
 
-          <!-- Left Side Text -->
-          <div class="col-md-6 d-flex align-items-center ftco-animate"
-            data-scrollax=" properties: { translateY: '70%' }">
-            <div class="text">
-              <span class="subheading">Hello!</span>
-              <h2 class="mb-4 mt-3">I'm <span>Sarvesh S Naik</span></h2>
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottie Test</title>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+</head>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#111;">
 
-              <!-- Typing Animation -->
-              <span id="typing-animation"></span>
+  <lottie-player 
+    src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"  
+    background="transparent"  
+    speed="1"  
+    style="width: 350px; height: 350px;"  
+    loop  
+    autoplay>
+  </lottie-player>
 
-              <script>
-                const typingAnimationElement = document.getElementById('typing-animation');
-                const typingTexts = ['Engineer  ', 'Programmer  ', 'Innovator  '];
+</body>
+								<script>
 
-                function playTypingAnimation(text) {
-                  for (let i = 0; i < text.length; i++) {
-                    setTimeout(() => {
-                      typingAnimationElement.textContent += text[i];
-                    }, i * 200);
-                  }
-                  setTimeout(() => {
-                    typingAnimationElement.textContent = '';
-                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                  }, text.length * 200);
-                }
-                playTypingAnimation(typingTexts[0]);
-              </script>
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
 
-              <br><br>
-              <h2>A Computer Science Engineer</h2>
-              <p>
-                <a href="https://github.com/sarveshnaik2477?tab=repositories"
-                  class="btn btn-primary py-3 px-4">My works</a>
-              </p>
-            </div>
-          </div>
+									// Create an array of typing text
+									const typingTexts = [
+										'Engineer  ',
+										'Programmer  ',
+										'Innovator  ',
+									];
 
-          <!-- Right Side Lottie -->
-          <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
-              background="transparent" speed="1" loop autoplay
-              style="width:350px; height:350px;"></lottie-player>
-          </div>
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
 
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
 
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Computer Science Engineer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<a href="https://github.com/sarveshnaik2477?tab=repositories"
+										class="btn btn-primary py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 <!--lottie start -->
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lottie Demo</title>
+  <!-- Lottie web component -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    .lottie-wrap{display:flex;align-items:center;justify-content:center;min-height:40vh;}
+  </style>
+</head>
+<body>
+  <div class="lottie-wrap">
+    <lottie-player
+      src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+      background="transparent"
+      speed="1"
+      style="width:300px;height:300px"
+      loop
+      autoplay>
+    </lottie-player>
+  </div>
+</body>
 <!--lottie end -->
 
 
