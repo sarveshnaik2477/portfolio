@@ -124,46 +124,42 @@
 							<div class="text">
 
 								<div class="lottie-text-wrap">
-									<!-- Lottie Animation -->
-									<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_q5pk6p1k.json"
-										background="transparent" speed="1" loop autoplay></lottie-player>
+  <!-- Lottie Animation -->
+  <lottie-player
+    src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+    background="transparent"
+    speed="1"
+    style="width:150px; height:150px;"
+    loop
+    autoplay>
+  </lottie-player>
 
-									<div>
-										<span class="subheading">Hello!</span>
-										<h2 class="mb-4 mt-3">I'm <span>Sarvesh S Naik</span></h2>
+  <div>
+    <span class="subheading">Hello!</span>
+    <h2 class="mb-4 mt-3">I'm <span>Sarvesh S Naik</span></h2>
 
-										<!-- Typing animation -->
-										<span id="typing-animation"></span>
+    <!-- Typing animation -->
+    <span id="typing-animation"></span>
+    <script>
+      const typingAnimationElement = document.getElementById('typing-animation');
+      const typingTexts = ['Engineer  ', 'Programmer  ', 'Innovator  '];
 
-										<script>
-											// Initialize the typing animation
-											const typingAnimationElement = document.getElementById('typing-animation');
+      function playTypingAnimation(text) {
+        for (let i = 0; i < text.length; i++) {
+          setTimeout(() => {
+            typingAnimationElement.textContent += text[i];
+          }, i * 200);
+        }
+        setTimeout(() => {
+          typingAnimationElement.textContent = '';
+          playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+        }, text.length * 200);
+      }
+      playTypingAnimation(typingTexts[0]);
+    </script>
+  </div>
+</div>
 
-											// Create an array of typing text
-											const typingTexts = [
-												'Engineer  ',
-												'Programmer  ',
-												'Innovator  ',
-											];
-
-											// Function for typing animation
-											function playTypingAnimation(text) {
-												for (let i = 0; i < text.length; i++) {
-													setTimeout(() => {
-														typingAnimationElement.textContent += text[i];
-													}, i * 200);
-												}
-												setTimeout(() => {
-													typingAnimationElement.textContent = '';
-													playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-												}, text.length * 200);
-											}
-
-											// Start the typing animation loop
-											playTypingAnimation(typingTexts[0]);
-										</script>
-									</div>
-								</div>
 
 								<br>
 								<h2>A Computer Science Engineer</h2>
