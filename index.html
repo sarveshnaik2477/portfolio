@@ -23,8 +23,6 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
 
- <!-- Lottie -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
 	<style>
@@ -141,26 +139,77 @@
 	</nav>
 
 	
-	 <section class="hero">
-    <div class="text">
-      <p>Hello!</p>
-      <h1>I'm Sarvesh S Naik</h1>
-      <h2>Programmer</h2>
-      <h2>A Computer Science Engineer</h2>
-      <a href="#">My works</a>
-    </div>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h2 class="mb-4 mt-3">I'm <span>Sarvesh S Naik</span></h2>
 
-    <!-- Lottie Animation -->
-    <lottie-player 
-      src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
-      background="transparent"
-      speed="1"
-      style="width: 300px; height: 300px;"
-      loop
-      autoplay>
-    </lottie-player>
-  </section>
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
 
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Engineer  ',
+										'Programmer  ',
+										'Innovator  ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Computer Science Engineer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<a href="https://github.com/sarveshnaik2477?tab=repositories"
+										class="btn btn-primary py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 <!--lottie start -->
 <head>
   <meta charset="UTF-8" />
